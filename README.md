@@ -8,4 +8,6 @@ It's very simple game.
 3. Tagged dots will recover when their time is done.
 4. If 1/4 of dots have been tagged, you lost game. But dots have been playing to end.
 
+ControlP5 library is required when it run.
+
 Hironobu SUZUKI < hironobu dot suzuki at gmail dot com >
