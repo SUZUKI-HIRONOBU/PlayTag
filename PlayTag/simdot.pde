@@ -7,6 +7,7 @@ void initZero() {
   dots[0].yv=2;
   game=1;
   start_t=millis();
+  end_t=start_t;
 }
 class SimDot extends Dot {
   int status; // 0: normal, 1: carrier, 2: recover
