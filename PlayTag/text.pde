@@ -7,10 +7,16 @@ void initText() {
 void showText()
 {
   int v=0;
+  int r=0;
+  int n=0;
   for ( int i=0; i < dots.length; i++) {
     if ( dots[i].status == 1) {
       v++;
     }
+    if ( dots[i].status == 2) {
+      r++;
+    }
+    n = dots.length - (v + r);
   }
   if ( v < 1 && end_t==start_t ) {
     end_t=millis();
@@ -21,9 +27,18 @@ void showText()
   if ( game == 1 && v < 1 ) {
     game = 100;
   }
+  textSize(32);
+  fill(#888888);
+  text(n, 32, height);
 
+  textSize(32);
+  fill(#00FFFF);
+  text(r, width-32, 32);
+
+  textSize(32);
   fill(#FF0000);
-  text(v, width-100, height);
+  text(v, width-32, height);
+
   if (game==-100) {
     textSize(64);
     textAlign(CENTER);
